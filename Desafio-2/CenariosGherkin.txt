@@ -1,0 +1,67 @@
+#language: pt
+
+Funcionalidade: Cadastro de funcionários
+    Sendo um administrador do site http://dummy.restapiexample.com/
+    Quero fazer o cadastro de funcionários
+    Para que eu possa ter o registro de funcionários
+
+
+
+Cenário: Cadastro novo funcionário
+    Dado que acesso a url
+    Quando informo o "<name>" o "<salary>" e a "<age>"
+    Então cadastro um funcionário com sucesso
+
+    Exemplos:
+        | name            | salary      | age   |
+        | Luzia Amorim    | 2000        | 30    |
+
+Cenário: Cadastro Campo Vazio
+    Dado que acesso a url
+    E não informo dados nos campos "<name>" o "<salary>" e a "<age>"
+    Quando submeto a requisição
+    Então um código de erro deve ser retornado
+
+    Exemplos:
+        | name    | salary      | age     |
+        | null    | null        | null    |
+
+Cenário: Listar todos os funcionário
+    Dado que acesso a url
+    Quando submeto uma requisição
+    Então deve ser exibida uma lista com todos os  funcionários cadastrados
+
+Cenário: Url inválida
+    Dado que acesso a url
+    Quando submeto a requisição da url inválida
+    Então um código de erro deve ser retornado
+
+Cenário: Consultar um único funcionário
+    Dado que acesso a url
+    E informo o id do funcionário
+    Quando submeto o a requisição
+    Então apenas o funcionário consultado deve ser exibido
+
+    Exemplos:
+        | id_funcionário    |
+        | 1                 |
+
+
+Cenário: Atualizar dados do funcionário
+    Dado que acesso a url
+    E informo o id do funcionário
+    Quando informo o "<name>" o "<salary>" e a "<age>"
+    Então a atualização deve ser feita
+
+    Exemplos:
+        | name            | salary      | age   |
+        | Luzia Amorim    | 3000        | 35    |
+
+
+Cenário: Excluir um funcionário
+    Dado que acesso a url
+    E informo o id do funcionário
+    Quando submeto o a requisição
+    Então apenas o funcionário consultado deve ser excluído
+
+
