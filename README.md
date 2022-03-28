@@ -18,3 +18,6 @@ Executar as tags (@abrir, @positivo, @negativo, @pesquisar, @excluir):
 - cucumber -t @nomeDaTag
 
 ***********************************************************************
+Desafio 02 – Cenário Backend
+
+Postman for Linux - Version 8.12.5
