@@ -1,0 +1,10 @@
+[caps]
+
+platformName = "Android"
+deviceName = "sdk_gphone_x86"
+udid = "emulator-5554"
+platformVersion = "11"
+
+app = "/home/lamorim/Documents/Aulas/QaNinja/Appium/cadastro_clientes_teste.apk"
+appPackage = "br.com.dudstecnologia.cadastrodeclientes"
+automationName = "uiautomator2"
