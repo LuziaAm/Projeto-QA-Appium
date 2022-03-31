@@ -1,3 +1,5 @@
+
+
 Given("que eu acesso o sistema como funcionario") do
   find_element(class:"android.widget.ImageButton")
 end
